@@ -14,7 +14,6 @@ class Subscriber
     
         for await (const msg of this.#sub)
         {
-            //console.log(`Received: ${msg.data.toString()}`);
             callback(msg.data.toString());
         }
     }
