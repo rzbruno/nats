@@ -8,7 +8,6 @@ class Server
         this.request_channel = request_channel;
         this.reply_channel = reply_channel;
         this.callback = callback;
-        this.on_request = this.on_request.bind(this);
     }
     
     on_request(input)
@@ -20,7 +19,7 @@ class Server
     start()
     {
         const sub = new Subscriber();
-        sub.subscribe(this.request_channel, this.on_request);
+        sub.subscribe(this.request_channel, (input) => this.on_request(input));
     }
 }
 
