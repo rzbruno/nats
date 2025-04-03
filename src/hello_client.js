@@ -1,6 +1,6 @@
 async function main()
 {
-    const Client = require("./client");
+    const Client = require("../driver/client");
 
     const client = new Client("request", "reply");
 

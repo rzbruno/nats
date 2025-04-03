@@ -1,4 +1,4 @@
-const Server = require("./server");
+const Server = require("../driver/server");
 
 function on_event()
 {
